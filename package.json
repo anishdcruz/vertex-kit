@@ -1,7 +1,10 @@
 {
   "name": "vertex-kit",
+  "description": "A fresh UI-Kit for web application, made with Vue.js 2.0",
   "version": "0.1.0",
-  "private": true,
+  "author": "Anish Dcruz <cruzanihs@gmail.com>",
+  "license": "Apache-2.0",
+  "main": "dist/vertex-kit.common.js",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -25,5 +28,12 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "repository": {
+      "type": "git",
+      "url": "git@github.com:anishdcruz/vertex-kit.git"
+    },
+    "bugs": {
+      "url": "https://github.com/anishdcruz/vertex-kit/issues"
+    },
 }
