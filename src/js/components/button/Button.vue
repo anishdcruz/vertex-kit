@@ -7,6 +7,7 @@
     :disabled="disabled"
     type="button"
 		@click="handleClick">
+		<span :class="`btn-icon icon icon-${icon}`" v-if="icon"></span>
 		<span class="btn-text" v-if="$slots.default">
 			<slot></slot>
 		</span>
@@ -21,7 +22,9 @@
 			  default: 'default'
 			},
 			size: String,
-			icon: String,
+			icon: {
+				default: null
+			},
 			disabled: {
 			  type: Boolean,
 			  default: false

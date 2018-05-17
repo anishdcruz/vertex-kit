@@ -20,10 +20,9 @@
 			</x-button-group>
 		</div>
 		<x-button-group>
-			<x-icon name="user"></x-icon>
-			<x-button icon="user" type="primary">Primary</x-button>
-			<x-button icon="user" type="secondary">Secondary</x-button>
-			<x-button icon="user" type="success">Success</x-button>
+			<x-button icon="users" type="primary">Primary</x-button>
+			<x-button icon="users" type="secondary">Secondary</x-button>
+			<x-button icon="users" type="success">Success</x-button>
 		</x-button-group>
 	</div>
 </template>

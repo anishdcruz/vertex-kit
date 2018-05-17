@@ -1,0 +1,60 @@
+.sidebar {
+	width: 17%;
+	padding-top: 15px;
+	&-dark {
+		background: $sidebar-color;
+	}
+	&-inner {
+		height: 100%;
+		overflow-y: scroll;
+		// background: pink;
+	}
+	&-group {
+		// background: red;
+	}
+	&-heading {
+		padding: 15px 15px 8px 15px;
+		display: flex;
+		align-items: center;
+	}
+	&-line {
+		flex: 3;
+		display: block;
+		height: 1px;
+		border-top: 1px solid lighten($sidebar-color, 6%);;
+	}
+	&-title {
+		flex: 2;
+		display: block;
+		text-transform: uppercase;
+		// background: pink;
+		font-size: 11px;
+		line-height: 11px;
+		color: lighten($sidebar-color, 25%);
+	}
+	&-item {
+		transition: background 0.2s;
+		padding: 8px 15px;
+		color: #f5ede5;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		&:hover {
+			background: #272d46;
+			color: #fff;
+		}
+	}
+	&-icon {
+		width: 15%;
+
+		color: darken(#f5ede5, 5%);
+	}
+	&-text {
+		width: 75%;
+	}
+	&-arrow {
+		text-align: right;
+		width: 10%;
+		color: darken(#f5ede5, 5%);
+	}
+}

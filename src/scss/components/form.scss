@@ -1,0 +1,123 @@
+.form-input {
+	color: $text-color;
+	line-height: $line-height;
+	font-size: $font-size-base;
+	height: 32px;
+	background: $input-bg;
+	transition: background 0.2s;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 2px;
+	padding: 8px;
+	width: 100%;
+	display: block;
+	&::placeholder {
+	  color: $color-grey;
+	}
+	&[disabled] {
+	    opacity: 0.75;
+	    cursor: not-allowed;
+	    background: $color-grey-light;
+	}
+	&:focus {
+		outline-style: dotted;
+		outline-width: 1px;
+		outline-offset: 1px;
+	}
+}
+
+.form-label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-optional {
+	text-align: right;
+	font-weight: normal;
+	color: lighten($text-color, 30%)
+}
+
+.error-input {
+	display: block;
+	// color: #e53935;
+	color:  $color-red;
+}
+
+textarea.form-input {
+	height: 99px;
+}
+
+.form-group {
+	padding: 0px 0px 15px 0px;
+}
+
+.select {
+	&-form {
+		width: 100%;
+		position: relative;
+	}
+	&-dropdown {
+		z-index: $z-index-select;
+		width: 100%;
+		border-radius: 2px;
+		position: absolute;
+		margin-top: 5px;
+		box-shadow: 0 1px 6px rgba(0,0,0,.2);
+		background: $color-white;
+	}
+	&-items {
+		overflow-y: scroll;
+		max-height: 183px;
+	}
+	&-item {
+		// border-bottom: 1px dashed $border-color-light;
+		cursor: pointer;
+		padding: 6px 8px;
+	}
+	&-active {
+		background: $color-blue;
+		color: #fff;
+	}
+	&-text {
+		user-select: none;
+		width: 95%;
+		line-height: $line-height;
+		font-size: $font-size-base;
+	}
+	&-icon {
+		transition: background 0.2s;
+		color: lighten($text-color, 20%);
+		text-align: right;
+		width: 5%;
+	}
+	&-input {
+		cursor: pointer;
+		color: $text-color;
+		line-height: $line-height;
+		font-size: $font-size-base;
+		height: 32px;
+		background: $input-bg;
+		border: 1px solid rgba(0,0,0,0.1);
+		border-radius: 2px;
+		padding: 8px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		&::placeholder {
+		  color: $color-grey;
+		}
+		&[disabled] {
+		    opacity: 0.75;
+		    cursor: not-allowed;
+		    background: $color-grey-light;
+		}
+		&:focus {
+			outline-style: dotted;
+			outline-width: 1px;
+			outline-offset: 1px;
+		}
+	}
+}

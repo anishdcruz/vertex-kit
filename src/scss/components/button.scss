@@ -2,66 +2,66 @@
 	border: none;
 	border-radius: 2px;
 	font-size: $font-size-base;
-    line-height: $line-height;
-    padding: 6px 16px;
-    display: inline-block;
-    position: relative;
-    text-shadow: none;
-    cursor: pointer;
-    transition: background 0.2s;
-    user-select: none;
-    &:focus {
-        outline-style: dotted;
-        outline-width: 1px;
-        outline-offset: 1px;
-    }
-    &:active {
-        box-shadow: inset $box-shadow;
-    }
-    &:disabled,
-    &:disabled:hover,
-    &:disabled:active, {
-      cursor: not-allowed;
-      color: $color-grey;
-      background-color: lighten($color-grey-light, 4%);
-      box-shadow: 0 1px darken($color-grey-light, 10%);
-    }
+  line-height: $line-height;
+  padding: 6px 16px;
+  display: inline-block;
+  position: relative;
+  text-shadow: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+  &:focus {
+      outline-style: dotted;
+      outline-width: 1px;
+      outline-offset: 1px;
+  }
+  &:active {
+      box-shadow: inset $box-shadow;
+  }
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active, {
+    cursor: not-allowed;
+    color: $color-grey;
+    background-color: lighten($color-grey-light, 4%);
+    box-shadow: 0 1px darken($color-grey-light, 10%);
+  }
 }
 
 .btn-default {
-    color: $text-color;
-    background: $color-grey-light;
-    box-shadow: 0 1px darken($color-grey-light, 10%);
+  color: $text-color;
+  background: $color-grey-light;
+  box-shadow: 0 1px darken($color-grey-light, 10%);
 }
 
 .btn-primary {
-    background: $color-blue;
-    color: $color-white;
-    box-shadow: 0 1px darken($color-blue, 10%);
+  background: $color-blue;
+  color: $color-white;
+  box-shadow: 0 1px darken($color-blue, 10%);
 }
 
 .btn-secondary {
-    background: $color-black;
-    color: $color-white;
-    box-shadow: 0 1px darken($color-black, 10%);
+  background: $color-black;
+  color: $color-white;
+  box-shadow: 0 1px darken($color-black, 10%);
 }
 
 .btn-success {
-    background: $color-green;
-    color: $color-white;
-    box-shadow: 0 1px darken($color-green, 10%);
+  background: $color-green;
+  color: $color-white;
+  box-shadow: 0 1px darken($color-green, 10%);
 }
 
 .btn-error {
-    background: $color-red;
-    color: $color-white;
-    box-shadow: 0 1px darken($color-red, 10%);
+  background: $color-red;
+  color: $color-white;
+  box-shadow: 0 1px darken($color-red, 10%);
 }
 
 .btn-link {
-    background: transparent;
-    color: $color-blue;
-    box-shadow: none;
+  background: transparent;
+  color: $color-blue;
+  box-shadow: none;
 }
 
 .btn-sm {
@@ -71,15 +71,15 @@
 }
 
 a.btn {
-    display: inline-block;
-    color: $text-color;
+  display: inline-block;
+  color: $text-color;
 }
 
 a.btn-primary,
 a.btn-secondary,
 a.btn-success,
 a.btn-danger {
-    color: $color-white;
+  color: $color-white;
 }
 
 .btn-group {
@@ -91,4 +91,8 @@ a.btn-danger {
   .btn:last-child {
     margin-right: 0px;
   }
+}
+
+.btn-icon {
+  margin-right: 5px;
 }

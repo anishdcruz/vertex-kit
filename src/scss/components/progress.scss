@@ -11,8 +11,8 @@
 .progress-line:before {
   background-color: #03a9f4;
   content: '';
-  -webkit-animation: running-progress 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  animation: running-progress 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  -webkit-animation: running-progress 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: running-progress 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 @-webkit-keyframes running-progress {
   0% { margin-left: 0px; margin-right: 100%; }

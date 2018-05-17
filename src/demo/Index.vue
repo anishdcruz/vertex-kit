@@ -30,7 +30,9 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
-			<small slot="footer">footer</small>
+			<small slot="footer">
+				<x-loading></x-loading>
+			</small>
 		</x-panel>
 		<x-panel :loading="true">
 			<div slot="title">Card volla Title</div>
