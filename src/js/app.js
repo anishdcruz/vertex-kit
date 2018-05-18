@@ -20,7 +20,7 @@ import Textarea from '@/js/components/form/Textarea.vue'
 import FormGroup from '@/js/components/form/FormGroup.vue'
 
 import Select from '@/js/components/form/Select.vue'
-
+import Switch from '@/js/components/form/Switch.vue'
 
 const components = {
 	Row,
@@ -38,7 +38,8 @@ const components = {
 	Input,
 	Textarea,
 	FormGroup,
-	Select
+	Select,
+	Switch
 }
 
 const prefix = 'X';
@@ -48,7 +49,7 @@ function install(Vue) {
 
 	for(const item in components) {
 		if(components[item].name) {
-			Vue.component(`${prefix}${components[item].name}`, components[item])
+			Vue.component(components[item].name, components[item])
 		}
 	}
 }

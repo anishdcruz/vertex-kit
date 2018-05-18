@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name: 'Textarea',
+    name: 'XTextarea',
     model: {
       prop: 'value',
       event: 'input'

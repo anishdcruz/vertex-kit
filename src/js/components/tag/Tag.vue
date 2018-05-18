@@ -13,7 +13,7 @@
 </template>
 <script>
   export default {
-  	name: 'Tag',
+  	name: 'XTag',
   	props: {
   		type: {
 			  type: String,

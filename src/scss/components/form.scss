@@ -74,7 +74,7 @@ textarea.form-input {
 	&-item {
 		// border-bottom: 1px dashed $border-color-light;
 		cursor: pointer;
-		padding: 6px 8px;
+		padding: 4px 8px;
 	}
 	&-active {
 		background: $color-blue;
@@ -120,4 +120,49 @@ textarea.form-input {
 			outline-offset: 1px;
 		}
 	}
+}
+
+
+.switch {
+    transition: all .3s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    min-width: 40px;
+    height: 20px;
+    border: 1px solid #bfbfbf;
+    border-radius: 20px;
+    background-color: #bfbfbf;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.switch:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color-white;
+}
+
+.switch-checked {
+    border-color: $color-blue;
+    background-color: $color-blue;
+}
+
+.switch-checked:after {
+    left: 100%;
+    margin-left: -17px;
+}
+
+
+.switch-disabled {
+	opacity: 0.75;
+	cursor: not-allowed;
+	background: $color-grey-light;
+	border: 1px solid $color-grey-light;
 }

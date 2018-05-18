@@ -26,7 +26,7 @@
 </template>
 <script>
   export default {
-  	name: 'FormGroup',
+  	name: 'XFormGroup',
   	model: {
   	  prop: 'value',
   	  event: 'input'
@@ -35,7 +35,7 @@
   		type: {
   			default: 'text'
   		},
-  	  value: [String, Number, Object, Array],
+  	  value: [String, Number, Object, Array, Boolean],
       options: Array,
       tabindex: [String, Number],
   	  placeholder: String,

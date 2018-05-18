@@ -1,6 +1,44 @@
 <template>
   <div class="content-inner">
     <x-panel margin>
+      <div slot="title">Switch</div>
+      <x-row>
+        <x-col span="4">
+          <div class="form-group">
+            <label class="form-label">
+              SW1
+            </label>
+            <x-switch v-model="form.sw1"></x-switch>
+          </div>
+        </x-col>
+        <x-col span="4">
+          <div class="form-group">
+            <label class="form-label">
+              SW2
+            </label>
+            <x-switch v-model="form.sw2"></x-switch>
+          </div>
+        </x-col>
+        <x-form-group col="4" v-model="form.sw2" source="switch" label="SW @@2" :errors="['A', 'B']" optional></x-form-group>
+        <x-col span="4">
+          <div class="form-group">
+            <label class="form-label">
+              SW3
+            </label>
+            <x-switch v-model="form.sw3"></x-switch>
+          </div>
+        </x-col>
+        <x-col span="4">
+          <div class="form-group">
+            <label class="form-label">
+              SW4
+            </label>
+            <x-switch disabled v-model="form.sw4"></x-switch>
+          </div>
+        </x-col>
+      </x-row>
+    </x-panel>
+    <x-panel margin>
       <div slot="title">Select</div>
       <x-row>
         <x-col span="8">
@@ -93,10 +131,20 @@
           inp1: 'ok',
           inp2: null,
           inp3: 'disabled',
-          sel1: {name: 'apple', value: 'Apple'}
+          sel1: {name: 'apple', value: 'Apple'},
+          sw1: 1,
+          sw2: 0,
+          sw3: false,
+          sw4: true
         },
         opt: {
           sel1: [
+            {name: 'apple', value: 'Apple'},
+            {name: 'mango', value: 'Mango'},
+            {name: 'orange', value: 'Orange'},
+            {name: 'apple', value: 'Apple'},
+            {name: 'mango', value: 'Mango'},
+            {name: 'orange', value: 'Orange'},
             {name: 'apple', value: 'Apple'},
             {name: 'mango', value: 'Mango'},
             {name: 'orange', value: 'Orange'}

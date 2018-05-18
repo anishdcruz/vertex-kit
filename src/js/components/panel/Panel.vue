@@ -26,7 +26,7 @@
 
 <script type="text/javascript">
 	export default {
-		name: 'Panel',
+		name: 'XPanel',
 		props: {
 			margin: {
 				type: [Boolean, String],

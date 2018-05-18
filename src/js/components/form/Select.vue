@@ -27,7 +27,7 @@
 </template>
 <script>
   export default {
-  	name: 'Select',
+  	name: 'XSelect',
   	 model: {
       prop: 'value',
       event: 'input'

@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-  	name: 'Input',
+  	name: 'XInput',
   	model: {
   	  prop: 'value',
   	  event: 'input'

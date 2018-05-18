@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'Col',
+  name: 'XCol',
   props: {
     span: {
       type: [Number, String],

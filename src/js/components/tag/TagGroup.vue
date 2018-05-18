@@ -5,6 +5,6 @@
 </template>
 <script>
 	export default {
-		name: 'TagGroup'
+		name: 'XTagGroup'
 	}
 </script>

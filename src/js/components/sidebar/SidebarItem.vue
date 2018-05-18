@@ -13,7 +13,7 @@
 </template>
 <script>
   export default {
-  	name: 'SidebarItem',
+  	name: 'XSidebarItem',
   	props: {
   		link: String,
   		icon: {
