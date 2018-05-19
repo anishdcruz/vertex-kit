@@ -1,7 +1,8 @@
 <template>
   <div class="content-inner">
   	<h1>Tag</h1>
-  	<x-tag-group>
+    <br>
+  	<div>
   		<x-tag type="default">One Tag</x-tag>
   		<x-tag type="primary">One Tag</x-tag>
   		<x-tag type="success" closable>One Tag</x-tag>
@@ -9,7 +10,7 @@
   		<x-tag type="warning">One Tag</x-tag>
   		<x-tag type="default" closable>One Tag</x-tag>
   		<x-tag type="default" v-if="show" @close="show = false" closable>One Tag</x-tag>
-  	</x-tag-group>
+  	</div>
   </div>
 </template>
 <script>

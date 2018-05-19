@@ -1,9 +1,9 @@
 <template>
 	<transition name="fade">
-	<div class="switch" :class="[{'switch-checked': value, 'switch-disabled': disabled}]"
-    @click="toggleSwitch">
-  </div>
-</transition>
+  	<div class="switch" :class="[{'switch-checked': value, 'switch-disabled': disabled}]"
+      @click="toggleSwitch">
+    </div>
+  </transition>
 </template>
 <script>
   export default {

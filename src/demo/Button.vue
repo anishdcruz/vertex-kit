@@ -14,9 +14,9 @@
 		</div>
 		<div>
 			<x-button-group>
-				<x-button type="primary">Primary</x-button>
-				<x-button type="secondary">Secondary</x-button>
-				<x-button type="success">Success</x-button>
+				<x-button icon="users"></x-button>
+				<x-button icon="users"></x-button>
+				<x-button icon="users"></x-button>
 			</x-button-group>
 		</div>
 		<x-button-group>

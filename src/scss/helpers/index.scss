@@ -3,3 +3,11 @@
 	position: relative;
 	text-align: center;
 }
+
+.loading-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 12;
+	width: 100%;
+}

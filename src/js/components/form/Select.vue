@@ -9,7 +9,6 @@
   		<span :class="[`select-icon icon icon-chevron-${showDropdown ? 'up' : 'down'}`]"></span>
   	</div>
   	<div class="select-dropdown" v-if="showDropdown">
-  		<transition name="fade">
   			<div class="select-inner">
   				<div class="select-items" ref="items">
   					<div :class="['select-item', selectIndex === i ? 'select-active':'']"
@@ -21,7 +20,6 @@
   				</div>
   				</div>
   			</div>
-  		</transition>
   	</div>
   </div>
 </template>

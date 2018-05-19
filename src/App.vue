@@ -12,7 +12,7 @@
 					<x-sidebar-item link="/" icon="align-center">Panel</x-sidebar-item>
 					<x-sidebar-item link="/tag" icon="arrow-right">Tag</x-sidebar-item>
 					<x-sidebar-item link="/form" icon="anchor">Form</x-sidebar-item>
-					<x-sidebar-item link="/icon" icon="arrow-right">Icon Fonts</x-sidebar-item>
+					<x-sidebar-item link="/Alert" icon="arrow-right">Alert</x-sidebar-item>
 					<x-sidebar-item link="/button" icon="anchor">Button</x-sidebar-item>
 				</x-sidebar-group>
 				<x-sidebar-group title="Purchase">

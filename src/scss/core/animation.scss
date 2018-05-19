@@ -42,6 +42,8 @@ $line-width: 4px !default;
 }
 
 .ball-beat {
+  position: relative;
+  display: flex;
   > div {
     @include balls();
     @include global-animation();
@@ -78,5 +80,44 @@ $line-width: 4px !default;
   }
   100% {
     opacity: 0;
+  }
+}
+
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.move-up-enter-active {
+  animation: moveUpIn .3s ease-in-out both;
+}
+.move-up-leave-active {
+  animation: moveUpOut .3s ease-in-out both;
+}
+
+@keyframes moveUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: translateY(-100%);
   }
 }

@@ -13,7 +13,6 @@ import SidebarGroup from '@/js/components/sidebar/SidebarGroup.vue'
 
 import Loading from '@/js/components/helpers/Loading.vue'
 import Tag from '@/js/components/tag/Tag.vue'
-import TagGroup from '@/js/components/tag/TagGroup.vue'
 
 import Input from '@/js/components/form/Input.vue'
 import Textarea from '@/js/components/form/Textarea.vue'
@@ -21,6 +20,13 @@ import FormGroup from '@/js/components/form/FormGroup.vue'
 
 import Select from '@/js/components/form/Select.vue'
 import Switch from '@/js/components/form/Switch.vue'
+
+import Alert from '@/js/components/alert/Alert.vue'
+
+import Modal from '@/js/components/modal/Modal.vue'
+
+import LoadingBar from '@/js/components/loading-bar'
+import Message from '@/js/components/message'
 
 const components = {
 	Row,
@@ -34,12 +40,15 @@ const components = {
 	SidebarGroup,
 	Loading,
 	Tag,
-	TagGroup,
 	Input,
 	Textarea,
 	FormGroup,
 	Select,
-	Switch
+	Switch,
+	Alert,
+	LoadingBar,
+	Message,
+	Modal
 }
 
 const prefix = 'X';
@@ -52,6 +61,9 @@ function install(Vue) {
 			Vue.component(components[item].name, components[item])
 		}
 	}
+
+	Vue.prototype.$bar = LoadingBar
+	Vue.prototype.$message = Message
 }
 
 if(typeof window !== 'undefined' && window.Vue) {

@@ -6,21 +6,16 @@ Vue.use(Vertex)
 Vue.use(Router)
 
 import App from "@/App.vue"
-import Index from "@/demo/Index.vue"
-import Grid from "@/demo/Grid.vue"
-import Button from "@/demo/Button.vue"
-import Icon from "@/demo/Icon.vue"
-import Tag from "@/demo/Tag.vue"
-import Form from "@/demo/Form.vue"
 
 const router = new Router({
 	routes: [
-		{path: '/', component: Index},
-		{path: '/grid', component: Grid},
-		{path: '/button', component: Button},
-		{path: '/icon', component: Icon},
-		{path: '/tag', component: Tag},
-		{path: '/form', component: Form}
+		{path: '/', component: () => import('./demo/Index.vue')},
+		{path: '/grid', component: () => import('./demo/Grid.vue')},
+		{path: '/button', component: () => import('./demo/Button.vue')},
+		{path: '/icon', component: () => import('./demo/Icon.vue')},
+		{path: '/tag', component: () => import('./demo/Tag.vue')},
+		{path: '/form', component: () => import('./demo/Form.vue')},
+		{path: '/alert', component: () => import('./demo/Alert.vue')}
 	]
 })
 

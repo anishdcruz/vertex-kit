@@ -85,11 +85,19 @@ a.btn-danger {
 .btn-group {
   font-size: 0;
   display: inline-block;
+
   .btn {
-    margin-right: 4px;
-  }
-  .btn:last-child {
-    margin-right: 0px;
+    border-radius: 0;
+
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+    &:first-child {
+      border-radius: 2px 0 0 2px;
+    }
+    &:last-child {
+      border-radius: 0 2px 2px 0;
+    }
   }
 }
 
