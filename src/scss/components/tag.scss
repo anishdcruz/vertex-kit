@@ -1,6 +1,6 @@
 .tag {
   display: inline-block;
-  padding: 1px 8px;
+  padding: 2px 6px;
   color: $color-white;
   font-size: 0;
   line-height: 1.5;
@@ -11,16 +11,24 @@
   background-color: $bg-color;
   outline: 0;
   &-text {
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 13px;
   }
   &-close {
-    font-size: 10px;
-    padding-left: 4px;
+    font-size: 9px;
+    line-height: 13px;
     margin: 0;
+    margin-left: 3px;
     cursor: pointer;
+    border-radius: 4px;
 
     &:hover {
-      color: tint($text-color, 30%);
+      background: rgba(243, 243, 243, 0.4);
+    }
+    &:focus {
+      outline-style: dotted;
+      outline-width: 1px;
+      outline-offset: 1px;
     }
   }
 }

@@ -2,7 +2,7 @@
   "name": "vertex-kit",
   "description": "A fresh UI-Kit for web application, made with Vue.js 2.0",
   "version": "0.3.0",
-  "author": "Anish Dcruz <cruzanihs@gmail.com>",
+  "author": "Anish Dcruz <cruzanish@gmail.com>",
   "license": "Apache-2.0",
   "main": "dist/vertex-kit.common.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "lib": "vue-cli-service build src/js/app.js --target lib"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {

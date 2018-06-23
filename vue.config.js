@@ -11,5 +11,8 @@ module.exports = {
         	preserveWhitespace: true
         })
       )
+  },
+  devServer: {
+    proxy: 'http://markdown.test'
   }
 }

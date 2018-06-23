@@ -24,9 +24,26 @@ import Switch from '@/js/components/form/Switch.vue'
 import Alert from '@/js/components/alert/Alert.vue'
 
 import Modal from '@/js/components/modal/Modal.vue'
+import Dropdown from '@/js/components/dropdown/Dropdown.vue'
+import DropdownMenu from '@/js/components/dropdown/DropdownMenu.vue'
+import DropdownItem from '@/js/components/dropdown/DropdownItem.vue'
 
 import LoadingBar from '@/js/components/loading-bar'
 import Message from '@/js/components/message'
+
+import Typeahead from '@/js/components/form/Typeahead.vue'
+import TypeaheadArray from '@/js/components/typeahead/TypeaheadArray.vue'
+
+import Image from '@/js/components/upload/Image.vue'
+
+import Table from '@/js/components/table/Table.vue'
+import TableRow from '@/js/components/table/TableRow.vue'
+import TableHead from '@/js/components/table/TableHead.vue'
+import TableBody from '@/js/components/table/TableBody.vue'
+import TableCell from '@/js/components/table/TableCell.vue'
+import TableFooter from '@/js/components/table/TableFooter.vue'
+
+import Http from '@/js/lib/Http'
 
 const components = {
 	Row,
@@ -46,12 +63,26 @@ const components = {
 	Select,
 	Switch,
 	Alert,
-	LoadingBar,
-	Message,
-	Modal
+	Modal,
+	Dropdown,
+	DropdownMenu,
+	DropdownItem,
+	Typeahead,
+	TypeaheadArray,
+	Image,
+	Table,
+	TableCell,
+	TableHead,
+	TableRow,
+	TableBody,
+	TableFooter
 }
 
-const prefix = 'X';
+const actions = {
+	LoadingBar,
+	Message,
+	Http
+}
 
 function install(Vue) {
 	if(install.installed) return
@@ -64,6 +95,7 @@ function install(Vue) {
 
 	Vue.prototype.$bar = LoadingBar
 	Vue.prototype.$message = Message
+	Vue.prototype.$http = Http
 }
 
 if(typeof window !== 'undefined' && window.Vue) {
@@ -72,5 +104,6 @@ if(typeof window !== 'undefined' && window.Vue) {
 
 export default {
 	install,
-	...components
+	...components,
+	...actions
 }

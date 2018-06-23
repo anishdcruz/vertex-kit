@@ -1,11 +1,24 @@
 <template>
   <div class="select-form">
-  	<div class="select-input" :tabindex="tabindex" ref="toggle"
+  	<div class="select-input" :tabindex="disabled ? -1 : tabindex" ref="toggle" :disabled="disabled"
 			@click="toggle"  @keydown.down.prevent="onDownKey"
 			@keydown.enter="onEnter"
 			@keydown.up.prevent="onUpKey" @keydown.esc="onBlur"
 			@blur="onBlur">
-  		<span class="select-text">{{selectedText}}</span>
+  		<div class="select-text" v-if="multiple">
+        <div class="select-tags" v-if="value.length">
+          <div class="tag tag-primary" v-for="(x, i) in value">
+            <span class="tag-text">
+              {{x.value}}
+            </span>
+            <span class="icon icon-x tag-close" @mousedown.prevent.stop="remove(x, i)" tabindex="0"></span>
+          </div>
+        </div>
+        <div v-else>Select</div>
+      </div>
+      <div class="select-text" v-else>
+        {{value && value.value ? value.value : 'Select'}}
+      </div>
   		<span :class="[`select-icon icon icon-chevron-${showDropdown ? 'up' : 'down'}`]"></span>
   	</div>
   	<div class="select-dropdown" v-if="showDropdown">
@@ -26,7 +39,7 @@
 <script>
   export default {
   	name: 'XSelect',
-  	 model: {
+  	model: {
       prop: 'value',
       event: 'input'
     },
@@ -34,8 +47,16 @@
     	tabindex: {
     		default: 0
     	},
-    	value: Object,
-    	options: Array
+    	value: [Object, Array],
+      options: Array,
+      disabled: {
+        default: false,
+        type: Boolean
+      },
+      multiple: {
+        default: false,
+        type: Boolean
+      }
     },
     data() {
     	return {
@@ -43,17 +64,25 @@
     		selectIndex: -1
     	}
     },
-    computed: {
-    	selectedText() {
-    		return this.value && this.value.value ? this.value.value : 'Select'
-    	}
-    },
     methods: {
+      remove(x, i) {
+          const payload = this.value
+          payload.splice(i, 1)
+          this.$emit('input', payload)
+          this.close()
+      },
     	select(option) {
-    		this.$emit('input', option)
-    		this.close()
-    	},
+        if(this.multiple) {
+            const payload = this.value
+            payload.push(option)
+            this.$emit('input', payload)
+          } else {
+            this.$emit('input', option)
+          }
+        this.close()
+      },
     	onEnter() {
+        if(this.disabled) return
     		if(this.selectIndex < 0) return
     		const option = this.options[this.selectIndex]
     		this.select(option)
@@ -69,6 +98,7 @@
     		this.showDropdown = true
     	},
     	toggle() {
+        if(this.disabled) return
     		if(this.showDropdown) {
     			this.close()
     		} else {
@@ -79,6 +109,7 @@
     		this.selectIndex = index
     	},
     	onUpKey(e) {
+        if(this.disabled) return
     		if (this.selectIndex > 0) {
     		  this.selectIndex--
     		  if(this.selectIndex > 4) {
@@ -95,6 +126,7 @@
     		}
     	},
     	onDownKey(e) {
+        if(this.disabled) return
     		if(!this.showDropdown) {
     			this.open()
     		}

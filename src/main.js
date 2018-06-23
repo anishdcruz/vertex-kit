@@ -15,7 +15,8 @@ const router = new Router({
 		{path: '/icon', component: () => import('./demo/Icon.vue')},
 		{path: '/tag', component: () => import('./demo/Tag.vue')},
 		{path: '/form', component: () => import('./demo/Form.vue')},
-		{path: '/alert', component: () => import('./demo/Alert.vue')}
+		{path: '/alert', component: () => import('./demo/Alert.vue')},
+		{path: '/table', component: () => import('./demo/Table.vue')}
 	]
 })
 

@@ -1,0 +1,55 @@
+.upload-image {
+	&-inner {
+		cursor: pointer;
+		color: $text-color;
+		line-height: $line-height;
+		font-size: $font-size-base;
+		min-height: 132px;
+		background: $input-bg;
+		border: 1px dashed rgba(0,0,0,0.1);
+		border-radius: 2px;
+		padding: 6px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&-icon {
+		font-size: 25px;
+		line-height: 30px;
+		color: $color-grey;
+	}
+	&-preview {
+		background: $input-bg;
+		border: 1px dashed rgba(0,0,0,0.1);
+		border-radius: 2px;
+		padding: 3px;
+		position: relative;
+	}
+	&-img {
+		display: block;
+		width: 100%;
+	}
+	&-close {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		line-height: 12px;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		padding: 5px;
+		background: rgba(243, 243, 243, 0.4);
+		border-radius: 15px;
+		&:hover {
+			background: rgba(243, 243, 243, 0.9);
+		}
+	}
+}

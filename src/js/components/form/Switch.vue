@@ -1,7 +1,7 @@
 <template>
 	<transition name="fade">
-  	<div class="switch" :class="[{'switch-checked': value, 'switch-disabled': disabled}]"
-      @click="toggleSwitch">
+  	<div class="switch" :tabindex="disabled ? -1 : tabindex" :class="[{'switch-checked': value, 'switch-disabled': disabled}]"
+      @click="toggleSwitch" @keydown.space.prevent="toggleSwitch">
     </div>
   </transition>
 </template>
@@ -17,7 +17,10 @@
   	  disabled: {
   	    type: Boolean,
   	    default: false
-  	  }
+  	  },
+      tabindex: {
+        default: 0
+      }
   	},
   	methods: {
   	  toggleSwitch(e) {

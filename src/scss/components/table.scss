@@ -1,0 +1,34 @@
+.item-table {
+	width: 100%;
+    border-collapse: collapse;
+    thead {
+        tr {
+            th {
+                text-align: left;
+                padding: 5px;
+                font-weight: bold;
+                a {
+                    font-weight: normal;
+                    color: $color-blue;
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                vertical-align: top;
+                padding: 5px;
+            }
+        }
+    }
+    tfoot {
+        tr {
+            td {
+                vertical-align: top;
+                padding: 5px;
+            }
+        }
+    }
+}

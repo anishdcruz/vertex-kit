@@ -1,6 +1,32 @@
 <template>
   <div class="content-inner">
     <x-panel margin>
+      <div slot="title">Image Upload</div>
+      <x-row>
+        <x-col span="6">
+          <label class="form-label">Image</label>
+          <x-image-upload></x-image-upload>
+        </x-col>
+      </x-row>
+    </x-panel>
+    <x-panel margin>
+      <div slot="title">Typeahead</div>
+      <x-row>
+        <x-col span="6">
+          <div class="form-group">
+            <label class="form-label">Typeahead Array</label>
+            <x-typeahead-array v-model="form.t1" :options="opt.t1"></x-typeahead-array>
+          </div>
+        </x-col>
+        <x-col span="6">
+          <div class="form-group">
+            <label class="form-label">Typeahead Multiple</label>
+            <x-typeahead-array v-model="form.t2" :options="opt.t1" multiple></x-typeahead-array>
+          </div>
+        </x-col>
+      </x-row>
+    </x-panel>
+    <x-panel margin>
       <div slot="title">Switch</div>
       <x-row>
         <x-col span="4">
@@ -47,13 +73,19 @@
             <x-select v-model="form.sel1" :options="opt.sel1"></x-select>
           </div>
         </x-col>
+         <x-col span="8">
+          <div class="form-group">
+            <label class="form-label">Selection Multiple</label>
+            <x-select v-model="form.t2" :options="opt.sel1" multiple></x-select>
+          </div>
+        </x-col>
       </x-row>
       <x-row>
         <x-form-group col="10" source="select" v-model="form.sel1" :options="opt.sel1" label="Is Ok?" :errors="['A', 'B']" optional></x-form-group>
         <x-col span="10">
           <div class="form-group">
-            <label class="form-label">Selection 2</label>
-            <x-select v-model="form.sel1" :options="opt.sel1"></x-select>
+            <label class="form-label">Selection Disabled</label>
+            <x-select disabled v-model="form.sel1" :options="opt.sel1"></x-select>
           </div>
         </x-col>
       </x-row>
@@ -132,12 +164,26 @@
           inp2: null,
           inp3: 'disabled',
           sel1: {name: 'apple', value: 'Apple'},
+          sel2: [{name: 'apple', value: 'Apple'}],
           sw1: 1,
           sw2: 0,
           sw3: false,
-          sw4: true
+          sw4: true,
+          t1: {name: 'apple', value: 'Apple'},
+          t2: [{name: 'apple', value: 'Apple'}]
         },
         opt: {
+          t1: [
+            {name: 'apple', value: 'Apple'},
+            {name: 'mango', value: 'Mango'},
+            {name: 'orange', value: 'Orange'},
+            {name: 'apple', value: 'Apple'},
+            {name: 'mango', value: 'Mango'},
+            {name: 'orange', value: 'Orange'},
+            {name: 'apple', value: 'Apple'},
+            {name: 'mango', value: 'Mango'},
+            {name: 'orange', value: 'Orange'}
+          ],
           sel1: [
             {name: 'apple', value: 'Apple'},
             {name: 'mango', value: 'Mango'},

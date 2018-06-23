@@ -5,7 +5,9 @@
 	height: 32px;
 	background: $input-bg;
 	transition: background 0.2s;
-	border: 1px solid rgba(0,0,0,0.1);
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.01);
+	box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
 	border-radius: 2px;
 	padding: 8px;
 	width: 100%;
@@ -63,7 +65,7 @@ textarea.form-input {
 		width: 100%;
 		border-radius: 2px;
 		position: absolute;
-		margin-top: 5px;
+		margin-top: 3px;
 		box-shadow: 0 1px 6px rgba(0,0,0,.2);
 		background: $color-white;
 	}
@@ -83,7 +85,7 @@ textarea.form-input {
 	&-text {
 		user-select: none;
 		width: 95%;
-		line-height: $line-height;
+		line-height: 13px;
 		font-size: $font-size-base;
 	}
 	&-icon {
@@ -99,7 +101,9 @@ textarea.form-input {
 		font-size: $font-size-base;
 		height: 32px;
 		background: $input-bg;
-		border: 1px solid rgba(0,0,0,0.1);
+		border: none;
+		border-bottom: 1px solid rgba(0,0,0,0.01);
+   		box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
 		border-radius: 2px;
 		padding: 8px;
 		width: 100%;
@@ -113,6 +117,7 @@ textarea.form-input {
 		    opacity: 0.75;
 		    cursor: not-allowed;
 		    background: $color-grey-light;
+		    outline: none!important;
 		}
 		&:focus {
 			outline-style: dotted;
@@ -135,6 +140,11 @@ textarea.form-input {
     background-color: #bfbfbf;
     vertical-align: middle;
     user-select: none;
+    &:focus {
+    	outline-style: dotted;
+    	outline-width: 1px;
+    	outline-offset: 1px;
+    }
 }
 
 .switch:after {
@@ -147,6 +157,7 @@ textarea.form-input {
     height: 16px;
     border-radius: 50%;
     background-color: $color-white;
+	box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .switch-checked {
@@ -165,4 +176,32 @@ textarea.form-input {
 	cursor: not-allowed;
 	background: $color-grey-light;
 	border: 1px solid $color-grey-light;
+	outline: none!important;
+}
+.select-search-wrap {
+	padding: 7px;
+}
+.select-search {
+	border: none;
+	background: #fafafa;
+	box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
+	display: block;
+	width: 100%;
+	padding: 4px;
+    &:focus {
+    	outline-style: dotted;
+    	outline-width: 1px;
+    	outline-offset: 1px;
+    }
+}
+
+.select-tags {
+  font-size: 0;
+  display: inline-block;
+  .tag {
+    margin-right: 2px;
+  }
+  .tag:last-child {
+    margin-right: 0px;
+  }
 }
