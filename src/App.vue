@@ -17,7 +17,7 @@
 				</x-sidebar-group>
 				<x-sidebar-group title="Inventory">
 					<x-sidebar-item link="/panel" icon="align-center">Items</x-sidebar-item>
-					<x-sidebar-item link="/icon" icon="arrow-right">Icon Fonts</x-sidebar-item>
+					<x-sidebar-item link="/settings" icon="arrow-right">Settings</x-sidebar-item>
 				</x-sidebar-group>
 				<x-sidebar-group title="Purchase">
 					<x-sidebar-item link="/panel" icon="align-center">Panel</x-sidebar-item>
